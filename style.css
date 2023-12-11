@@ -39,12 +39,6 @@ nav ul li a:hover {
     color: black;
 }
 
-/* Image resizing */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
 /* Footer icon resizing */
 footer img {
     width: 50px; /* Adjust as needed */
