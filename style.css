@@ -78,5 +78,16 @@ footer img {
     }
     /* Other responsive styles */
 }
+.scrollable-gallery {
+    display: flex;
+    overflow-x: hidden;
+    gap: 10px;
+    padding: 10px;
+}
 
-/* For a continuous scrolling effect, you may need additional JavaScript or CSS animations */
+.scrollable-gallery img {
+    flex-shrink: 0;
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+}
