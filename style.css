@@ -80,14 +80,13 @@ footer img {
 }
 .scrollable-gallery {
     display: flex;
-    overflow-x: hidden;
-    gap: 10px;
-    padding: 10px;
+    overflow: hidden;
+    width: 200px; /* Width of one image */
 }
 
 .scrollable-gallery img {
     flex-shrink: 0;
     width: 200px;
     height: auto;
-    border-radius: 5px;
+    transition: transform 0.5s ease; /* Animation for smooth transition */
 }

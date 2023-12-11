@@ -1,7 +1,16 @@
+let scrollAmount = 0;
+
 document.getElementById('scrollRight').addEventListener('click', () => {
-    document.querySelector('.scrollable-gallery').scrollBy({ left: 200, behavior: 'smooth' });
+    const gallery = document.querySelector('.scrollable-gallery');
+    if (scrollAmount < gallery.scrollWidth - gallery.clientWidth) {
+        scrollAmount += 200; // Width of the image
+    }
+    gallery.style.transform = `translateX(-${scrollAmount}px)`;
 });
 
 document.getElementById('scrollLeft').addEventListener('click', () => {
-    document.querySelector('.scrollable-gallery').scrollBy({ left: -200, behavior: 'smooth' });
+    if (scrollAmount > 0) {
+        scrollAmount -= 200;
+    }
+    document.querySelector('.scrollable-gallery').style.transform = `translateX(-${scrollAmount}px)`;
 });
