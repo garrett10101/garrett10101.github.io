@@ -5,6 +5,9 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+    <script src="navbar.js"></script>
+    <script src="scroll-animation.js"></script>
+    <script src="emailMe.js"></script>
     <header>
         <nav>
             <ul>
@@ -72,13 +75,23 @@
     
 
     <section id="contact">
-        section>
         <h2>Get in Touch</h2>
         <p>I'm always interested in new opportunities and collaborations. Feel free to reach out to me!</p>
-        <ul>
-            <li>Email: <a href="mailto:garrettdipalma2@gmail.com">garrettdipalma2@gmail.com</a></li>
-        </ul>
+        
+        <form id="contactForm">
+            <label for="email">Your Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+    
+            <label for="subject">Subject:</label><br>
+            <input type="text" id="subject" name="subject" required><br>
+    
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" required></textarea><br>
+    
+            <button type="submit">Send</button>
+        </form>
     </section>
+    
 
     <footer>
         <p>&copy; 2023 Garrett DiPalma</p>
@@ -89,7 +102,5 @@
             <!-- Add more icons as needed -->
         </div>
     </footer>
-    <script src="navbar.js"></script>
-    <script src="scroll-animation.js"></script>
 </body>
 </html>
