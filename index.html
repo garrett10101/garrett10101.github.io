@@ -7,7 +7,7 @@
 <body>
     <script src="js/navbar.js"></script>
     <script src="js/emailMe.js"></script>
-    <script src="js/animatedScrolling.js"></script>
+    <script src="js/slideshow.js"></script>
     <header>
         <nav>
             <ul>
@@ -25,19 +25,29 @@
 
     <section id="projects">
         <h2>My Projects</h2>
-        <div class="gallery-container">
-            <div class="scrollable-gallery">
-                <img src="img/CPU vs CUDA.png" alt="Project 1">
-                <img src="img/Bobcat-CLAWS-Logo.png" alt="Project 2">
-                <!-- Add more images as needed -->
+        <div class="slideshow-container">
+            <div class="slides">
+                <div class="slide">
+                    <img src="img/CPU vs CUDA.png" alt="Project 1">
+                    <div class="project-info">
+                        <p>Project 1 Description...</p>
+                        <a href="link-to-project-1">Learn More</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="img/Bobcat-CLAWS-Logo.png" alt="Project 2">
+                    <div class="project-info">
+                        <p>Project 2 Description...</p>
+                        <a href="link-to-project-2">Learn More</a>
+                    </div>
+                </div>
+                <!-- Add more slides as needed -->
             </div>
-            <div class="gallery-navigation">
-                <!-- Navigation circles will be added here by JavaScript -->
-            </div>
+            <button class="prev">←</button>
+            <button class="next">→</button>
         </div>
-        <button id="scrollLeft">←</button>
-        <button id="scrollRight">→</button>
     </section>
+    
 
     <section id="about">
         <h2>About Me</h2>

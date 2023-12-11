@@ -84,31 +84,22 @@ footer img {
     overflow: hidden;
 }
 
-.scrollable-gallery {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.scrollable-gallery img {
-    flex: 0 0 auto;
+.slideshow-container {
+    position: relative;
     width: 200px;
     height: auto;
 }
 
-.gallery-navigation {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
+.slides .slide {
+    display: none;
 }
 
-.gallery-navigation span {
-    height: 10px;
-    width: 10px;
-    margin: 0 5px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    cursor: pointer;
+.slides .slide img {
+    width: 100%;
+    height: auto;
+}
+
+.project-info {
+    text-align: center;
+    padding: 10px;
 }
