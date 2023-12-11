@@ -78,15 +78,37 @@ footer img {
     }
     /* Other responsive styles */
 }
+.gallery-container {
+    position: relative;
+    width: 200px; /* Set the width of the window */
+    overflow: hidden;
+}
+
 .scrollable-gallery {
     display: flex;
-    overflow: hidden;
-    width: 200px; /* Width of one image */
+    transition: transform 0.5s ease;
 }
 
 .scrollable-gallery img {
-    flex-shrink: 0;
+    flex: 0 0 auto;
     width: 200px;
     height: auto;
-    transition: transform 0.5s ease; /* Animation for smooth transition */
+}
+
+.gallery-navigation {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.gallery-navigation span {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
 }
