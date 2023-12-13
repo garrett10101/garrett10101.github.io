@@ -86,13 +86,6 @@ footer img {
     width: 100%;
     aspect-ratio: 16 / 9;
   }
-  .video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
 
   /* Next & previous buttons */
   .prev, .next {
@@ -135,4 +128,31 @@ footer img {
     position: absolute;
     top: 0;
   }
-  
+  .text-box {
+    text-align: center;
+    padding: 10px;
+}
+
+.slide-text{
+    background-color: #f2f2f2;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.project-button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
