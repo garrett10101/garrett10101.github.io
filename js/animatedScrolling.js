@@ -1,38 +1,37 @@
-const gallery = document.querySelector('.scrollable-gallery');
-const images = gallery.querySelectorAll('img');
-const navigation = document.querySelector('.gallery-navigation');
-let currentIndex = 0;
+document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll("section");
+    let currentSectionIndex = 0;
+    let isThrottled = false;
 
-// Create navigation circles
-images.forEach((img, index) => {
-    const circle = document.createElement('span');
-    circle.addEventListener('click', () => moveToIndex(index));
-    navigation.appendChild(circle);
-});
+    document.addEventListener("wheel", function(e) {
+        if (isThrottled) return;
+        isThrottled = true;
+        setTimeout(() => isThrottled = false, 1000);
 
-function updateNavigation() {
-    navigation.querySelectorAll('span').forEach((circle, index) => {
-        circle.style.backgroundColor = index === currentIndex ? '#000' : '#bbb';
+        const direction = e.deltaY > 0 ? 1 : -1;
+        scroll(direction);
     });
-}
 
-function moveToIndex(index) {
-    currentIndex = index;
-    const position = -200 * index; // 200 is the width of the image
-    gallery.style.transform = `translateX(${position}px)`;
-    updateNavigation();
-}
+    function scroll(direction) {
+        if (direction === 1) {
+            if (currentSectionIndex < sections.length - 1) {
+                currentSectionIndex++;
+                moveToCurrentSection();
+            }
+        } else {
+            if (currentSectionIndex > 0) {
+                currentSectionIndex--;
+                moveToCurrentSection();
+            }
+        }
+    }
 
-document.getElementById('scrollRight').addEventListener('click', () => {
-    if (currentIndex < images.length - 1) {
-        moveToIndex(currentIndex + 1);
+    function moveToCurrentSection() {
+        sections.forEach((section, index) => {
+            section.style.transform = `translateY(-${currentSectionIndex * 100}%)`;
+            section.style.transition = 'transform 0.8s ease-in-out';
+            section.style.opacity = index === currentSectionIndex ? '1' : '0';
+            section.style.transitionDelay = index === currentSectionIndex ? '0.4s' : '0s';
+        });
     }
 });
-
-document.getElementById('scrollLeft').addEventListener('click', () => {
-    if (currentIndex > 0) {
-        moveToIndex(currentIndex - 1);
-    }
-});
-
-updateNavigation(); // Initial update for navigation circles
