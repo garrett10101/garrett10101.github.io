@@ -9,7 +9,13 @@ header, nav, section, footer {
     margin: 20px;
     padding: 10px;
 }
-
+header {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #333;
+}
 /* Header bar styling */
 nav {
     background-color: #333;
@@ -248,5 +254,37 @@ footer img {
     display: block;
     width: 30px; /* Or your desired size */
     height: auto;
+}
+.skills-container {
+    margin: 20px 0;
+}
+
+.skill {
+    margin-bottom: 15px;
+}
+
+.skill span {
+    font-weight: bold;
+}
+
+.skill-bars {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.skill-bar {
+    height: 24px;
+    background-color: #4CAF50;
+    line-height: 24px;
+    padding-left: 10px;
+    color: white;
+    width: 0; /* Initial state */
+    animation: fillSkillBar 2s forwards;
+}
+
+@keyframes fillSkillBar {
+    from { width: 0; }
+    to { width: auto; } /* It will be set by inline style */
 }
 
