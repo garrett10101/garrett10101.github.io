@@ -255,36 +255,67 @@ footer img {
     width: 30px; /* Or your desired size */
     height: auto;
 }
-.skills-container {
-    margin: 20px 0;
-}
-
-.skill {
-    margin-bottom: 15px;
-}
-
-.skill span {
-    font-weight: bold;
-}
-
-.skill-bars {
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.skill-bar {
-    height: 24px;
-    background-color: #4CAF50;
-    line-height: 24px;
-    padding-left: 10px;
-    color: white;
-    width: 0; /* Initial state */
-    animation: fillSkillBar 2s forwards;
-}
 
 @keyframes fillSkillBar {
     from { width: 0; }
     to { width: auto; } /* It will be set by inline style */
 }
+#skills {
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
 
+.skills-container {
+    display: flex;
+    gap: 10px;
+    animation: scroll 60s linear infinite;
+}
+
+.icon-background {
+    background-color: #fff;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+}
+
+.icon-background img {
+    max-width: 100px;
+    height: auto;
+    display: block;
+}
+
+.icon-background:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.icon-background:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-100% / 2)); }
+}
