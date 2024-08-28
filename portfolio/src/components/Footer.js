@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaLinkedin, FaGithub, FaDownload } from 'react-icons/fa';
 import './Footer.css';
 
 const Footer = () => {
@@ -6,10 +7,14 @@ const Footer = () => {
     <footer>
       <p style={{ color: 'white' }}>&copy; 2024 Garrett DiPalma</p>
       <div className="social-media">
-        <a href="https://www.linkedin.com/in/garrett-dipalma/" className="social-link" target="_blank" rel="noopener noreferrer"><img src="img/linkedin-icon.png" alt="LinkedIn" /></a>
-        <a href="https://github.com/garrett10101" className="social-link" target="_blank" rel="noopener noreferrer"><img src="img/github-icon.png" alt="GitHub" /></a>
+        <a href="https://www.linkedin.com/in/garrett-dipalma/" className="social-link" target="_blank" rel="noopener noreferrer">
+          <FaLinkedin size={30} color="#0e76a8" />
+        </a>
+        <a href="https://github.com/garrett10101" className="social-link" target="_blank" rel="noopener noreferrer">
+          <FaGithub size={30} color="#333" />
+        </a>
         <a href="Garrett_Resume - Edited Resume.pdf" download="Garrett_DiPalma_Resume.pdf" className="resume-download">
-          <img src="img/download-icon.png" alt="Download Resume" />
+          <FaDownload size={30} color="#00cc66" />
         </a>
       </div>
     </footer>
