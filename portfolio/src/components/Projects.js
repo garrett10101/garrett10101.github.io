@@ -7,13 +7,15 @@ const Projects = () => {
   const slides = [
     {
       id: 1,
-      image: 'img/CPU vs CUDA.png',
+      // image: 'img/CPU vs CUDA.png', // Commented out real image
+      image: 'https://via.placeholder.com/800x400?text=CPU+vs+CUDA', // Placeholder image
       description: 'CPU vs CUDA - Computer Architecture project that used OpenMP and CUDA to compare performance between CPU and GPU',
       projectLink: 'https://github.com/jtj60/Computer-Architecture-Project',
     },
     {
       id: 2,
-      image: 'img/BobcatClaws.png',
+      // image: 'img/BobcatClaws.png', // Commented out real image
+      image: 'https://via.placeholder.com/800x400?text=BobcatCLAWS', // Placeholder image
       description: 'BobcatCLAWS - Senior Software Project. Deployed via NodeJS on-campus server, used SSL, reverse proxy, and AngularUI. Used MySQL database and created scripts for data collection and reactive webpage.',
       projectLink: 'https://github.com/garrett10101/BobcatClaws',
       websiteLink: 'http://bobcatclaws.ddns.net',
@@ -26,7 +28,8 @@ const Projects = () => {
     },
     {
       id: 4,
-      image: 'img/Predictions Graph_GB_GridSearch.png',
+      // image: 'img/Predictions Graph_GB_GridSearch.png', // Commented out real image
+      image: 'https://via.placeholder.com/800x400?text=Machine+Learning+Project', // Placeholder image
       description: 'Machine Learning Course Project - Forecasting Total Dissolved Solids (TDS) and water temperature using advanced machine learning techniques.',
       projectLink: 'https://github.com/garrett10101/Machine-Learning-Project',
     },
@@ -72,8 +75,8 @@ const Projects = () => {
           </div>
         ))}
         {/* Navigation buttons */}
-        <a className="prev" onClick={prevSlide}>&#10094;</a>
-        <a className="next" onClick={nextSlide}>&#10095;</a>
+        <button className="prev" onClick={prevSlide} aria-label="Previous Slide">&#10094;</button>
+        <button className="next" onClick={nextSlide} aria-label="Next Slide">&#10095;</button>
       </div>
     </section>
   );
