@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 import {
   SiC, SiCplusplus, SiCsharp, SiPython, SiJavascript, SiPhp, SiHtml5, SiCss3, SiPowershell, SiOracle,
   SiMysql, SiFlask, SiJira, SiBitbucket, SiGit, SiLinux, SiVisualstudio, SiIntellijidea, SiPandas, SiNumpy,
-  SiWindows, SiVmware, SiMicrosoftexcel, SiApachespark, SiMicrosoftazure, SiAnsible, SiUbuntu, SiActivecampaign
+  SiWindows, SiVmware, SiMicrosoftexcel, SiApachespark, SiMicrosoftazure, SiAnsible, SiUbuntu
 } from 'react-icons/si';
-import { FaDatabase, FaServer, FaJava, FaTerminal, FaCode } from 'react-icons/fa'; // Added FaCode for Geany
+import { FaDatabase, FaServer, FaJava, FaTerminal, FaCode, FaUsersCog } from 'react-icons/fa'; // Added FaUsersCog for Active Directory
 import './Skills.css';
 
 const Skills = () => {
@@ -15,11 +15,11 @@ const Skills = () => {
     { icon: <SiCplusplus size={50} color="#00599C" />, name: 'C++' },
     { icon: <SiCsharp size={50} color="#239120" />, name: 'C#' },
     { icon: <SiPython size={50} color="#3776AB" />, name: 'Python' },
-    { icon: <FaJava size={50} color="#007396" />, name: 'Java' }, // Corrected icon for Java
+    { icon: <FaJava size={50} color="#007396" />, name: 'Java' },
     { icon: <SiJavascript size={50} color="#F7DF1E" />, name: 'JavaScript' },
     { icon: <SiPhp size={50} color="#777BB4" />, name: 'PHP' },
     { icon: <SiHtml5 size={50} color="#E34F26" />, name: 'HTML' },
-    { icon: <FaTerminal size={50} color="#4EAA25" />, name: 'BASH' }, // Using FaTerminal to represent BASH
+    { icon: <FaTerminal size={50} color="#4EAA25" />, name: 'BASH' },
     { icon: <SiCss3 size={50} color="#1572B6" />, name: 'CSS' },
     { icon: <SiPowershell size={50} color="#5391FE" />, name: 'PowerShell' },
     { icon: <SiMysql size={50} color="#4479A1" />, name: 'MySQL' },
@@ -34,11 +34,11 @@ const Skills = () => {
     { icon: <SiWindows size={50} color="#0078D6" />, name: 'Windows' },
     { icon: <SiVisualstudio size={50} color="#5C2D91" />, name: 'Visual Studio' },
     { icon: <SiIntellijidea size={50} color="#000000" />, name: 'IntelliJ' },
-    { icon: <FaCode size={50} color="#000000" />, name: 'Geany' }, // Using FaCode for Geany
+    { icon: <FaCode size={50} color="#000000" />, name: 'Geany' },
     { icon: <SiPandas size={50} color="#150458" />, name: 'Pandas' },
     { icon: <SiNumpy size={50} color="#013243" />, name: 'Numpy' },
     { icon: <SiVmware size={50} color="#607078" />, name: 'VMware' },
-    { icon: <SiActivecampaign size={50} color="#1572B6" />, name: 'Active Directory' },
+    { icon: <FaUsersCog size={50} color="#0052CC" />, name: 'Active Directory' }, // Using FaUsersCog for Active Directory
     { icon: <FaDatabase size={50} color="#336791" />, name: 'Database Systems' },
     { icon: <SiAnsible size={50} color="#EE0000" />, name: 'Machine Learning' },
     { icon: <SiMicrosoftazure size={50} color="#008AD7" />, name: 'Optimization' },
