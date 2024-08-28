@@ -5,7 +5,7 @@ import {
   SiMysql, SiFlask, SiJira, SiBitbucket, SiGit, SiLinux, SiVisualstudio, SiIntellijidea, SiGeany, SiPandas, SiNumpy,
   SiWindows, SiVmware, SiMicrosoftexcel, SiApachespark, SiMicrosoftazure, SiAnsible, SiUbuntu, SiActivecampaign
 } from 'react-icons/si';
-import { FaBash, FaDatabase, FaServer, FaJava } from 'react-icons/fa'; // Added FaJava from FontAwesome
+import { FaDatabase, FaServer, FaJava, FaTerminal } from 'react-icons/fa'; // Added FaTerminal for BASH
 import './Skills.css';
 
 const Skills = () => {
@@ -19,7 +19,7 @@ const Skills = () => {
     { icon: <SiJavascript size={50} color="#F7DF1E" />, name: 'JavaScript' },
     { icon: <SiPhp size={50} color="#777BB4" />, name: 'PHP' },
     { icon: <SiHtml5 size={50} color="#E34F26" />, name: 'HTML' },
-    { icon: <FaBash size={50} color="#4EAA25" />, name: 'BASH' },
+    { icon: <FaTerminal size={50} color="#4EAA25" />, name: 'BASH' }, // Using FaTerminal to represent BASH
     { icon: <SiCss3 size={50} color="#1572B6" />, name: 'CSS' },
     { icon: <SiPowershell size={50} color="#5391FE" />, name: 'PowerShell' },
     { icon: <SiMysql size={50} color="#4479A1" />, name: 'MySQL' },
