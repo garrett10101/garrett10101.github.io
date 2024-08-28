@@ -25,7 +25,9 @@ jobs:
         working-directory: .  # Use the root directory
 
       - name: Build the project
-        run: npm run build
+        run: |
+          export NODE_OPTIONS=--openssl-legacy-provider
+          npm run build
         working-directory: .  # Use the root directory
 
       - name: Deploy to GitHub Pages
