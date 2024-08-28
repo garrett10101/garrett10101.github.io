@@ -3,7 +3,9 @@ import { motion } from 'framer-motion';
 import {
   SiC, SiCplusplus, SiCsharp, SiPython, SiJavascript, SiPhp, SiHtml5, SiCss3, SiPowershell, SiOracle,
   SiMysql, SiFlask, SiJira, SiBitbucket, SiGit, SiLinux, SiVisualstudio, SiIntellijidea, SiPandas, SiNumpy,
-  SiWindows, SiVmware, SiMicrosoftexcel, SiApachespark, SiMicrosoftazure, SiAnsible, SiUbuntu
+  SiWindows, SiVmware, SiMicrosoftexcel, SiApachespark, SiMicrosoftazure, SiAnsible, SiUbuntu,
+  SiAmazonec2,
+  SiAmazons3
 } from 'react-icons/si';
 import { FaDatabase, FaServer, FaJava, FaTerminal, FaCode, FaUsersCog } from 'react-icons/fa'; // Added FaUsersCog for Active Directory
 import './Skills.css';
@@ -42,6 +44,8 @@ const Skills = () => {
     { icon: <FaDatabase size={50} color="#336791" />, name: 'Database Systems' },
     { icon: <SiAnsible size={50} color="#EE0000" />, name: 'Machine Learning' },
     { icon: <SiMicrosoftazure size={50} color="#008AD7" />, name: 'Optimization' },
+    { icon: <SiAmazonec2 size={50} color="#232F3E" />, name: 'AWS EC2' },
+    { icon: <SiAmazons3 size={50} color="#569A31" />, name: 'AWS S3' },
     
     // Additional Skills
     { icon: <SiApachespark size={50} color="#E25A1C" />, name: 'Data Analysis' },
