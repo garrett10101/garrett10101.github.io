@@ -16,58 +16,39 @@ body, html {
   min-height: 100vh;
 }
 
+/* Theme variables */
 .light-mode {
-  background-color: #f0f0f0;
-  color: #333;
+  --bg-color: #f0f0f0;
+  --text-color: #333;
+  --accent-color: #00bfa5;
+  --card-bg-color: #fff;
+  --card-text-color: #666;
+  --card-border-color: #ddd;
 }
 
 .dark-mode {
-  background-color: #1a1a1a;
-  color: #ffffff;
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;
+  --accent-color: #00ffcc;
+  --card-bg-color: #333;
+  --card-text-color: #f0f0f0;
+  --card-border-color: #444;
+}
+
+.App {
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 .content {
-  flex: 1; /* Take up the remaining space */
+  flex: 1;
 }
 
 section {
   padding: 20px;
   margin: 0 auto;
   width: 100%;
-  max-width: 1200px; /* Limit max-width for readability */
-}
-
-/* Navbar styles */
-.navbar {
-  display: flex;
-  justify-content: space-around;
-  background-color: inherit;
-  padding: 10px;
-}
-
-.navbar a {
-  color: inherit;
-  text-decoration: none;
-  padding: 10px 20px;
-}
-
-.navbar a:hover {
-  background-color: #00ffcc;
-  color: #1a1a1a;
-}
-
-.toggle-button {
-  background: none;
-  border: 1px solid #00ffcc;
-  color: inherit;
-  padding: 5px 10px;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.toggle-button:hover {
-  background-color: #00ffcc;
-  color: #1a1a1a;
+  max-width: 1200px;
 }
 
 /* Footer styles */

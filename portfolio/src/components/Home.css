@@ -1,31 +1,15 @@
 /* Home.css */
 .home-section {
-  background-color: #1a1a1a; /* Dark background for better contrast */
-  color: #ffffff; /* White text for high readability */
+  background-color: var(--bg-color);
+  color: var(--text-color);
   padding: 20px;
   text-align: center;
 }
 
 .home-section h2 {
-  color: #00ffcc; /* Accent color for headings */
+  color: var(--accent-color);
 }
 
 .home-section p {
-  color: #f0f0f0; /* Slightly off-white for better readability */
+  color: var(--card-text-color);
 }
-  
-  .intro {
-    text-align: center;
-  }
-  
-  .intro h2 {
-    font-size: 2.5em;
-    color: #333;
-  }
-  
-  .intro p {
-    font-size: 1.2em;
-    color: #666;
-    margin-top: 10px;
-  }
-  
