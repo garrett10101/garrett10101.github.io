@@ -3,7 +3,7 @@ name: Deploy React App to GitHub Pages
 on:
   push:
     branches:
-      - react-conversion  # Set to react-conversion branch
+      - react-conversion  # Trigger on push to react-conversion branch
 
 jobs:
   build-and-deploy:
@@ -33,5 +33,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./portfolio/build
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # Or use PAT: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          publish_dir: ./portfolio/build  # Build directory
