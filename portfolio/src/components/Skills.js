@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
-  SiC, SiCplusplus, SiCsharp, SiPython, SiJava, SiJavascript, SiPhp, SiHtml5, SiCss3, SiPowershell, SiOracle,
+  SiC, SiCplusplus, SiCsharp, SiPython, SiJavascript, SiPhp, SiHtml5, SiCss3, SiPowershell, SiOracle,
   SiMysql, SiFlask, SiJira, SiBitbucket, SiGit, SiLinux, SiVisualstudio, SiIntellijidea, SiGeany, SiPandas, SiNumpy,
   SiWindows, SiVmware, SiMicrosoftexcel, SiApachespark, SiMicrosoftazure, SiAnsible, SiUbuntu, SiActivecampaign
 } from 'react-icons/si';
-import { FaBash, FaDatabase, FaServer } from 'react-icons/fa';
+import { FaBash, FaDatabase, FaServer, FaJava } from 'react-icons/fa'; // Added FaJava from FontAwesome
 import './Skills.css';
 
 const Skills = () => {
@@ -15,7 +15,7 @@ const Skills = () => {
     { icon: <SiCplusplus size={50} color="#00599C" />, name: 'C++' },
     { icon: <SiCsharp size={50} color="#239120" />, name: 'C#' },
     { icon: <SiPython size={50} color="#3776AB" />, name: 'Python' },
-    { icon: <SiJava size={50} color="#007396" />, name: 'Java' },
+    { icon: <FaJava size={50} color="#007396" />, name: 'Java' }, // Corrected icon for Java
     { icon: <SiJavascript size={50} color="#F7DF1E" />, name: 'JavaScript' },
     { icon: <SiPhp size={50} color="#777BB4" />, name: 'PHP' },
     { icon: <SiHtml5 size={50} color="#E34F26" />, name: 'HTML' },
