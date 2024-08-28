@@ -3,7 +3,7 @@ name: Deploy React App to GitHub Pages
 on:
   push:
     branches:
-      - react-branch  # Replace with your branch name
+      - react-conversion  # Set to react-conversion branch
 
 jobs:
   build-and-deploy:
@@ -13,7 +13,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
         with:
-          ref: react-conversion  # Checkout the specific branch
+          ref: react-conversion  # Checkout the react-conversion branch
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
