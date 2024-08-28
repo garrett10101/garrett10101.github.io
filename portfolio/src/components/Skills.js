@@ -2,10 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import {
   SiC, SiCplusplus, SiCsharp, SiPython, SiJavascript, SiPhp, SiHtml5, SiCss3, SiPowershell, SiOracle,
-  SiMysql, SiFlask, SiJira, SiBitbucket, SiGit, SiLinux, SiVisualstudio, SiIntellijidea, SiGeany, SiPandas, SiNumpy,
+  SiMysql, SiFlask, SiJira, SiBitbucket, SiGit, SiLinux, SiVisualstudio, SiIntellijidea, SiPandas, SiNumpy,
   SiWindows, SiVmware, SiMicrosoftexcel, SiApachespark, SiMicrosoftazure, SiAnsible, SiUbuntu, SiActivecampaign
 } from 'react-icons/si';
-import { FaDatabase, FaServer, FaJava, FaTerminal } from 'react-icons/fa'; // Added FaTerminal for BASH
+import { FaDatabase, FaServer, FaJava, FaTerminal, FaCode } from 'react-icons/fa'; // Added FaCode for Geany
 import './Skills.css';
 
 const Skills = () => {
@@ -34,7 +34,7 @@ const Skills = () => {
     { icon: <SiWindows size={50} color="#0078D6" />, name: 'Windows' },
     { icon: <SiVisualstudio size={50} color="#5C2D91" />, name: 'Visual Studio' },
     { icon: <SiIntellijidea size={50} color="#000000" />, name: 'IntelliJ' },
-    { icon: <SiGeany size={50} color="#000000" />, name: 'Geany' },
+    { icon: <FaCode size={50} color="#000000" />, name: 'Geany' }, // Using FaCode for Geany
     { icon: <SiPandas size={50} color="#150458" />, name: 'Pandas' },
     { icon: <SiNumpy size={50} color="#013243" />, name: 'Numpy' },
     { icon: <SiVmware size={50} color="#607078" />, name: 'VMware' },
