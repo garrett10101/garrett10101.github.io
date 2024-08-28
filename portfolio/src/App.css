@@ -13,7 +13,11 @@ body, html {
 .App {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100vh; /* Full viewport height */
+}
+
+.content {
+  flex: 1; /* Take up the remaining space */
 }
 
 section {
@@ -21,6 +25,17 @@ section {
   margin: 0 auto;
   width: 100%;
   max-width: 1200px; /* Limit max-width for readability */
+}
+
+/* Footer styles */
+footer {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  position: relative; /* Position relative within the flex container */
+  bottom: 0;
 }
 
 /* Navbar styles */
@@ -44,7 +59,6 @@ section {
 
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
-  /* Adjust layout for tablets and small screens */
   .navbar {
     flex-direction: column;
     align-items: center;
@@ -79,7 +93,6 @@ section {
 }
 
 @media (max-width: 480px) {
-  /* Further adjust layout for mobile phones */
   body, html {
     font-size: 14px; /* Smaller base font size for mobile */
   }
