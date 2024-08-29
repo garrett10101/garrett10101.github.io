@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaLinkedin, FaGithub, FaDownload } from 'react-icons/fa';
 import './Footer.css';
+import resumeFile from './assets/Garrett_DiPalma - Edited Resume.pdf';
 
 const Footer = () => {
   return (
@@ -13,7 +14,7 @@ const Footer = () => {
         <a href="https://github.com/garrett10101" className="social-link" target="_blank" rel="noopener noreferrer">
           <FaGithub size={30} color="#333" />
         </a>
-        <a href="Garrett_DiPalma_Resume.pdf" download="Garrett_DiPalma_Resume.pdf" className="resume-download">
+        <a href={resumeFile} download="Garrett_DiPalma_Resume.pdf" className="resume-download">
           <FaDownload size={30} color="#00cc66" />
         </a>
       </div>
