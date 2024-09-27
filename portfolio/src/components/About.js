@@ -3,7 +3,7 @@ import './About.css';
 
 const About = () => {
   return (
-    <section className="about-section" id="about" style={{ color: 'white' }}>
+    <section className="about-section" id="about">
       <h2>About Me</h2>
       <h3>Education</h3>
       <p><strong>Bachelor of Science in Computer Science</strong> <br />
