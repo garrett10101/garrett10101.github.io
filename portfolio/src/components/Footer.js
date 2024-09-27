@@ -1,8 +1,7 @@
 import React from 'react';
 import { FaLinkedin, FaGithub, FaDownload } from 'react-icons/fa';
 import './Footer.css';
-import resumeFile from './public/assets/Garrett_DiPalma - Edited Resume.pdf';
-
+import resumeFile from 'assets/Garrett_Resume - Edited Resume.pdf';
 const Footer = () => {
   return (
     <footer>
