@@ -5,13 +5,13 @@
   text-align: center;
 }
 
-.about-section h2 {
+.about-section h2, h3 {
   font-size: 2em;
   color: var(--text-color);
   margin-bottom: 20px;
 }
 
-.about-section p {
+.about-section p,li {
   font-size: 1.1em;
   color: var(--card-text-color);
   line-height: 1.6;
