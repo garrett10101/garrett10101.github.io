@@ -5,7 +5,13 @@
   text-align: center;
 }
 
-.projects-section h2, div{
+.projects-section h2{
+  font-size: 2em;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.projects-section p{
   font-size: 2em;
   color: var(--text-color);
   margin-bottom: 20px;
