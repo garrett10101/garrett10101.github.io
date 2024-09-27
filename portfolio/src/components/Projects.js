@@ -41,7 +41,7 @@ const Projects = () => {
   };
 
   return (
-    <section className="projects-section" id="projects" style={{ color: 'white' }}>
+    <section className="projects-section" id="projects">
       <h2>My Projects</h2>
       <div className="slideshow-container">
         {slides.map((slide, index) => (
