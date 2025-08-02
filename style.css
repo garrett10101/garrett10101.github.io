@@ -87,6 +87,7 @@ footer img {
   
   /* Hide the images by default */
   .mySlides {
+    display: none;
     /* existing styles */
     transition: opacity 0.5s ease; /* Add this line for transition */
     width: 100%;
