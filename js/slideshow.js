@@ -1,5 +1,21 @@
 var slideIndex = 1;
+initDots();
 showSlides(slideIndex);
+
+// Dynamically create dot elements based on the number of slides
+function initDots() {
+  var slides = document.getElementsByClassName("mySlides");
+  var dotsContainer = document.getElementById("dots-container");
+  if (!dotsContainer) return;
+
+  dotsContainer.innerHTML = "";
+  for (let i = 0; i < slides.length; i++) {
+    var dot = document.createElement("span");
+    dot.className = "dot";
+    dot.addEventListener("click", function() { currentSlide(i + 1); });
+    dotsContainer.appendChild(dot);
+  }
+}
 
 // Next/previous controls
 function plusSlides(n) {
@@ -15,7 +31,7 @@ function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
+  if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
       slides[i].style.opacity = "0";  
@@ -30,5 +46,7 @@ function showSlides(n) {
   for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
   }
-  dots[slideIndex-1].className += " active";
+  if (dots.length >= slideIndex) {
+      dots[slideIndex-1].className += " active";
+  }
 }
