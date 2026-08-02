@@ -25,11 +25,11 @@ npm install
 npm test
 ```
 
-Jest covers the pure/testable logic in `js/emailMe.js`, `js/experience.js`, `js/skills.js`, `js/githubProjects.js`, and the LinkedIn importer (`scripts/lib/linkedinImport.js`).
+Jest covers the pure/testable logic in `js/emailMe.js`, `js/experience.js`, `js/education.js`, `js/certifications.js`, `js/skills.js`, `js/githubProjects.js`, and the LinkedIn importer (`scripts/lib/linkedinImport.js`).
 
 ## Updating content
 
-- **Experience & Skills sections**: sourced from `js/experienceData.js` and `js/skillsData.js`. There's no public LinkedIn API for individual developers to pull profile data live, so these files are the manual/semi-automated equivalent — see "Importing from LinkedIn" below for the scripted path, or just hand-edit either file directly (they're plain arrays, safe to edit by hand any time).
+- **Experience, Education, Certifications & Skills sections**: sourced from `js/experienceData.js`, `js/educationData.js`, `js/certificationsData.js`, and `js/skillsData.js`. There's no public LinkedIn API for individual developers to pull profile data live, so these files are the manual/semi-automated equivalent — see "Importing from LinkedIn" below for the scripted path, or just hand-edit any of them directly (they're plain arrays, safe to edit by hand any time — the Experience list, for instance, is intentionally hand-trimmed to tech/IT-relevant roles rather than every job on record).
 - **GitHub projects section**: fully automatic. It fetches your public repos live from the GitHub REST API (`js/githubProjects.js`) on page load and lists the 6 most recently updated (excluding forks, archived repos, and this portfolio repo itself). New/updated repos show up with no redeploy needed. Results are cached in `sessionStorage` for 30 minutes to stay well under GitHub's unauthenticated 60 requests/hour rate limit.
 - **Resume**: replace `Garrett_DiPalma_Resume.pdf` with an updated file of the same name (or update the filename in `index.html`'s two resume links if you rename it).
 
@@ -37,15 +37,16 @@ Jest covers the pure/testable logic in `js/emailMe.js`, `js/experience.js`, `js/
 
 LinkedIn has no public API individual developers can use to pull profile data live, and scraping the site violates their Terms of Service and breaks constantly — so there's no such thing as a true real-time LinkedIn sync. What *is* real: LinkedIn's own official data export.
 
-1. On LinkedIn: **Settings → Data Privacy → Get a copy of your data**, request the export, and download the ZIP LinkedIn emails you.
+1. On LinkedIn: **Settings → Data Privacy → Get a copy of your data**, request the export, and download the ZIP LinkedIn emails you. **Request the full/complete export**, not a partial one — `Profile.csv` alone (just name/headline/summary) is *not* the full export; Experience/Education/Certifications/Skills each live in their own separate CSV (`Positions.csv`, `Education.csv`, `Certifications.csv`, `Skills.csv`) bundled in the same ZIP.
 2. Unzip it somewhere, e.g. `~/Downloads/linkedin-export/`.
 3. Run:
    ```
    npm run import:linkedin -- ~/Downloads/linkedin-export --dry-run
    ```
-   The `--dry-run` flag prints what would be generated without writing anything — review it, then drop `--dry-run` to actually write `js/experienceData.js` and `js/skillsData.js`.
-4. Run `git diff` and review the changes before committing — the importer's description-to-bullets splitting is a heuristic, not real NLP, and LinkedIn's own CSV column names/date formats aren't versioned and can drift over time (the importer fails with a clear error naming the missing column if that happens, rather than silently producing garbage).
-5. Skills new to LinkedIn that aren't already in `scripts/skillsCategoryMap.js` show up under an "Other" category with no icon, plus a warning in the script's output — add them to `scripts/skillsCategoryMap.js` (with a category + icon path) to categorize them properly, then re-run the import.
+   The `--dry-run` flag prints what would be generated without writing anything — review it, then drop `--dry-run` to actually write the four data files.
+4. Add `--only=experience,education,certifications,skills` (any subset, comma-separated) to limit which files get regenerated — useful if you only want to refresh one or two sections without touching the others. For example, `--only=education,certifications` leaves `js/experienceData.js` and `js/skillsData.js` untouched.
+5. Run `git diff` and review the changes before committing — the importer's description-to-bullets splitting is a heuristic, not real NLP, LinkedIn's row order isn't reliably chronological (entries are re-sorted most-recent-first, but always double check), and LinkedIn's own CSV column names/date formats aren't versioned and can drift over time (the importer fails with a clear error naming the missing column if that happens, rather than silently producing garbage). The Experience list in particular is worth reviewing for scope — LinkedIn exports your *entire* work history, which may include much older or less relevant roles you'd rather leave off a portfolio; trimming `js/experienceData.js` by hand afterward is expected and safe (re-running the importer will overwrite it again, so re-trim after each real import).
+6. Skills/Certifications new to LinkedIn that aren't already in `scripts/skillsCategoryMap.js` show up under an "Other" category (skills) or just render as-is (certifications, which aren't categorized) — for skills specifically, add new ones to `scripts/skillsCategoryMap.js` (with a category + icon path) to categorize them properly, then re-run the import.
 
 This is a manual, periodic workflow you re-run whenever your LinkedIn changes — never automatic, because nothing legitimate can be.
 

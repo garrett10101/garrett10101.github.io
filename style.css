@@ -478,6 +478,59 @@ nav ul li a.active {
 }
 
 /* ==========================================================================
+   Certifications (compact chip grid)
+   ========================================================================== */
+.certifications-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: var(--space-1) 0 var(--space-3);
+}
+
+.cert-chip {
+    position: relative;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    padding: 6px 14px;
+}
+
+.cert-chip a {
+    text-decoration: none;
+}
+
+.cert-chip-label {
+    font-size: 0.85rem;
+    color: var(--color-text);
+}
+
+.cert-chip a:hover .cert-chip-label {
+    color: var(--color-accent);
+}
+
+.cert-chip:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-surface-hover);
+    color: var(--color-text);
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 1;
+    margin-bottom: 6px;
+    box-shadow: var(--shadow-card);
+}
+
+.cert-empty {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
    Contact
    ========================================================================== */
 #contact form {
