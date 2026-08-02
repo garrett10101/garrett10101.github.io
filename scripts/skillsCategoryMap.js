@@ -12,7 +12,9 @@ var CATEGORY_ORDER = [
     'Frameworks & Libraries',
     'Databases & Data Tools',
     'Systems & DevOps',
-    'Dev & Project Tools'
+    'Dev & Project Tools',
+    'Web Services & Integration',
+    'Methodologies & Concepts'
 ];
 
 // Keyed by normalizeSkillName(name) -> { name, category, icon }
@@ -28,6 +30,7 @@ var SKILL_CATEGORIES = {
     'css': { name: 'CSS', category: 'Languages', icon: 'img/icons/css.png' },
     'bash': { name: 'BASH', category: 'Languages', icon: 'img/icons/bash.png' },
     'sql': { name: 'SQL', category: 'Languages', icon: 'img/icons/sql.jpg' },
+    't-sql': { name: 'T-SQL', category: 'Languages' },
     'powershell': { name: 'PowerShell', category: 'Languages', icon: 'img/icons/powershell.png' },
 
     'flask': { name: 'Flask', category: 'Frameworks & Libraries', icon: 'img/icons/flask.png' },
@@ -36,6 +39,7 @@ var SKILL_CATEGORIES = {
     'matplotlib': { name: 'Matplotlib', category: 'Frameworks & Libraries', icon: 'img/icons/matplotlib.png' },
 
     'oracle': { name: 'Oracle', category: 'Databases & Data Tools', icon: 'img/icons/oracle.png' },
+    'microsoft sql server': { name: 'Microsoft SQL Server', category: 'Databases & Data Tools' },
     'mysql': { name: 'MySQL', category: 'Databases & Data Tools', icon: 'img/icons/mysql.png' },
     'mysql workbench': { name: 'MySQL Workbench', category: 'Databases & Data Tools', icon: 'img/icons/mysql-workbench.png' },
 
@@ -51,20 +55,32 @@ var SKILL_CATEGORIES = {
 
     'jira': { name: 'Jira', category: 'Dev & Project Tools', icon: 'img/icons/jira.png' },
     'visual studio': { name: 'Visual Studio', category: 'Dev & Project Tools', icon: 'img/icons/visual studio.png' },
-    'geany': { name: 'Geany', category: 'Dev & Project Tools', icon: 'img/icons/geany.png' }
+    'geany': { name: 'Geany', category: 'Dev & Project Tools', icon: 'img/icons/geany.png' },
+
+    'wsdl': { name: 'WSDL', category: 'Web Services & Integration' },
+    'xml': { name: 'XML', category: 'Web Services & Integration' },
+    'soap': { name: 'SOAP', category: 'Web Services & Integration' },
+
+    'sdlc': { name: 'SDLC', category: 'Methodologies & Concepts' }
 };
 
 // LinkedIn skill label variants -> canonical key in SKILL_CATEGORIES above.
 var SKILL_ALIASES = {
     'github': 'git/github',
     'git': 'git/github',
-    'ms sql server': 'sql',
-    't-sql': 'sql',
+    'ms sql server': 'microsoft sql server',
+    'sql server': 'microsoft sql server',
+    'mssql': 'microsoft sql server',
+    'transact-sql': 't-sql',
     'shell scripting': 'bash',
     'active directory (ad)': 'active directory',
     'vmware esxi': 'vmware',
     'rest apis': 'api integration',
-    'rest api': 'api integration'
+    'rest api': 'api integration',
+    'soap protocol': 'soap',
+    'soap web services': 'soap',
+    'software development life cycle': 'sdlc',
+    'software development lifecycle': 'sdlc'
 };
 
 if (typeof module !== 'undefined') {

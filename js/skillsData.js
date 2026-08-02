@@ -18,7 +18,8 @@ var SKILLS = [
             { name: "PHP", icon: "img/icons/php.png" },
             { name: "PowerShell", icon: "img/icons/powershell.png" },
             { name: "Python", icon: "img/icons/python.png" },
-            { name: "SQL", icon: "img/icons/sql.jpg" }
+            { name: "SQL", icon: "img/icons/sql.jpg" },
+            { name: "T-SQL" }
         ]
     },
     {
@@ -33,6 +34,7 @@ var SKILLS = [
     {
         category: "Databases & Data Tools",
         skills: [
+            { name: "Microsoft SQL Server" },
             { name: "MySQL", icon: "img/icons/mysql.png" },
             { name: "MySQL Workbench", icon: "img/icons/mysql-workbench.png" },
             { name: "Oracle", icon: "img/icons/oracle.png" }
@@ -58,6 +60,20 @@ var SKILLS = [
             { name: "Geany", icon: "img/icons/geany.png" },
             { name: "Jira", icon: "img/icons/jira.png" },
             { name: "Visual Studio", icon: "img/icons/visual studio.png" }
+        ]
+    },
+    {
+        category: "Web Services & Integration",
+        skills: [
+            { name: "WSDL" },
+            { name: "XML" },
+            { name: "SOAP" }
+        ]
+    },
+    {
+        category: "Methodologies & Concepts",
+        skills: [
+            { name: "SDLC" }
         ]
     }
 ];
