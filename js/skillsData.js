@@ -25,6 +25,7 @@ var SKILLS = [
     {
         category: "Frameworks & Libraries",
         skills: [
+            { name: ".NET", icon: "img/icons/dotnet.svg" },
             { name: "Flask", icon: "img/icons/flask.png" },
             { name: "Matplotlib", icon: "img/icons/matplotlib.png" },
             { name: "Numpy", icon: "img/icons/numpy.png" },
@@ -58,7 +59,9 @@ var SKILLS = [
         category: "Dev & Project Tools",
         skills: [
             { name: "Geany", icon: "img/icons/geany.png" },
+            { name: "Godot", icon: "img/icons/godot.svg" },
             { name: "Jira", icon: "img/icons/jira.png" },
+            { name: "QGIS", icon: "img/icons/qgis.svg" },
             { name: "Visual Studio", icon: "img/icons/visual studio.png" }
         ]
     },

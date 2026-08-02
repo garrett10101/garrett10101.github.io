@@ -33,6 +33,7 @@ var SKILL_CATEGORIES = {
     't-sql': { name: 'T-SQL', category: 'Languages', icon: 'img/icons/t-sql.svg' },
     'powershell': { name: 'PowerShell', category: 'Languages', icon: 'img/icons/powershell.png' },
 
+    '.net': { name: '.NET', category: 'Frameworks & Libraries', icon: 'img/icons/dotnet.svg' },
     'flask': { name: 'Flask', category: 'Frameworks & Libraries', icon: 'img/icons/flask.png' },
     'pandas': { name: 'Pandas', category: 'Frameworks & Libraries', icon: 'img/icons/pandas.png' },
     'numpy': { name: 'Numpy', category: 'Frameworks & Libraries', icon: 'img/icons/numpy.png' },
@@ -56,6 +57,8 @@ var SKILL_CATEGORIES = {
     'jira': { name: 'Jira', category: 'Dev & Project Tools', icon: 'img/icons/jira.png' },
     'visual studio': { name: 'Visual Studio', category: 'Dev & Project Tools', icon: 'img/icons/visual studio.png' },
     'geany': { name: 'Geany', category: 'Dev & Project Tools', icon: 'img/icons/geany.png' },
+    'godot': { name: 'Godot', category: 'Dev & Project Tools', icon: 'img/icons/godot.svg' },
+    'qgis': { name: 'QGIS', category: 'Dev & Project Tools', icon: 'img/icons/qgis.svg' },
 
     'wsdl': { name: 'WSDL', category: 'Web Services & Integration', icon: 'img/icons/wsdl.svg' },
     'xml': { name: 'XML', category: 'Web Services & Integration', icon: 'img/icons/xml.svg' },
@@ -79,6 +82,11 @@ var SKILL_ALIASES = {
     'rest api': 'api integration',
     'soap protocol': 'soap',
     'soap web services': 'soap',
+    'dotnet': '.net',
+    '.net framework': '.net',
+    '.net core': '.net',
+    'godot engine': 'godot',
+    'qgis desktop': 'qgis',
     'software development life cycle': 'sdlc',
     'software development lifecycle': 'sdlc'
 };
