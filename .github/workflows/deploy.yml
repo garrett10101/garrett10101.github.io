@@ -45,6 +45,11 @@ jobs:
           EMAILJS_TEMPLATE_ID: ${{ secrets.EMAILJS_TEMPLATE_ID }}
         run: node scripts/generate-emailjs-config.js
 
+      # node_modules is only needed for the `npm test` step above — it must
+      # never be part of the published site (hundreds of unnecessary files).
+      - name: Remove dev dependencies before publishing
+        run: rm -rf node_modules
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
