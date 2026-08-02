@@ -1,0 +1,143 @@
+:root {
+    --bg: #f5f2e8;
+    --ink: #0a0a0a;
+    --accent: #ffe600;
+    --accent2: #ff3d00;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.wrap {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.block {
+    border: 4px solid var(--ink);
+    margin-bottom: 24px;
+    padding: 24px;
+}
+
+.hero {
+    background: var(--accent);
+}
+
+.hero h1 {
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    margin: 0;
+    text-transform: uppercase;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    max-width: 620px;
+    margin: 16px 0 0;
+    font-weight: 600;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    margin: 0 0 16px;
+    display: inline-block;
+    background: var(--ink);
+    color: var(--bg);
+    padding: 4px 12px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.item {
+    border: 3px solid var(--ink);
+    padding: 16px;
+    background: #fff;
+}
+
+.item h3 {
+    margin: 0 0 8px;
+    text-transform: uppercase;
+    font-size: 1.05rem;
+}
+
+.item p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.item.accent { background: var(--accent2); color: #fff; }
+.item.accent h3 { color: #fff; }
+
+a.link {
+    color: var(--ink);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.chip {
+    border: 3px solid var(--ink);
+    background: #fff;
+    padding: 6px 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+form.contact-mock {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 460px;
+}
+
+form.contact-mock input, form.contact-mock textarea {
+    border: 3px solid var(--ink);
+    padding: 12px;
+    font-family: inherit;
+    font-size: 1rem;
+    background: #fff;
+}
+
+form.contact-mock button {
+    align-self: flex-start;
+    background: var(--ink);
+    color: var(--bg);
+    border: 3px solid var(--ink);
+    padding: 12px 28px;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+form.contact-mock button:hover {
+    background: var(--accent2);
+    border-color: var(--accent2);
+    color: #fff;
+}
+
+footer {
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 20px 0;
+    font-size: 0.85rem;
+}

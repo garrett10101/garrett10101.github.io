@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Demo: Terminal / Dev Console</title>
+<link rel="stylesheet" href="terminal.css">
+</head>
+<body>
+<div class="crt">
+
+    <div class="window">
+        <div class="titlebar"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="label">garrett@portfolio: ~</span></div>
+        <div class="body">
+            <div class="prompt">$ <span class="path">whoami</span></div>
+            <p class="output">Garrett DiPalma &mdash; Computer Science Graduate</p>
+            <div class="prompt">$ <span class="path">cat about.txt</span></div>
+            <p class="output">Driven and detail-oriented, I am a computer science graduate with a focus on engineering and problem-solving. Specializing in machine learning, programming, and performance optimization through parallelism, I bring a wealth of experience in configuring complex systems. National Eagle Scout recipient.</p>
+            <div class="prompt">$ <span class="cursor"></span></div>
+        </div>
+    </div>
+
+    <div class="window">
+        <div class="titlebar"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="label">ls projects/</span></div>
+        <div class="body">
+            <div class="cards">
+                <div class="card"><h3>CPU-vs-CUDA/</h3><p>OpenMP + CUDA performance comparison. <a href="#">view →</a></p></div>
+                <div class="card"><h3>BobcatCLAWS/</h3><p>Senior software project, NodeJS + MySQL + AngularUI. <a href="#">view →</a></p></div>
+                <div class="card"><h3>Machine-Learning-Project/</h3><p>TDS &amp; water temp forecasting. <a href="#">view →</a></p></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="window">
+        <div class="titlebar"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="label">cat experience.log</span></div>
+        <div class="body">
+            <div class="cards">
+                <div class="card"><h3>IT Assistant &mdash; Meadows Center</h3><p>02/2023 - Present. Installed/configured WeeWX, managed Apache/FTP backups.</p></div>
+                <div class="card"><h3>IT Technician &mdash; QASystems</h3><p>03/2024 - 01/2025. Tier 1 hardware support, Chromebook repair, QC.</p></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="window">
+        <div class="titlebar"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="label">grep -r skills/</span></div>
+        <div class="body">
+            <div class="skills-row">
+                <span class="chip">Python</span><span class="chip">C++</span><span class="chip">JavaScript</span>
+                <span class="chip">SQL</span><span class="chip">Flask</span><span class="chip">Git/GitHub</span>
+                <span class="chip">Linux</span><span class="chip">Pandas</span><span class="chip">Numpy</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="window">
+        <div class="titlebar"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="label">mail --compose</span></div>
+        <div class="body">
+            <form class="contact-mock" onsubmit="return false;">
+                <label>to: garrett &lt;masked-alias&gt;</label>
+                <label for="d-email">from:</label>
+                <input id="d-email" type="email" placeholder="you@example.com">
+                <label for="d-subj">subject:</label>
+                <input id="d-subj" type="text" placeholder="Let's work together">
+                <label for="d-msg">body:</label>
+                <textarea id="d-msg" rows="4" placeholder="Type your message..."></textarea>
+                <button type="submit">send()</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>&copy; 2026 Garrett DiPalma &mdash; [ linkedin ] [ github ] [ resume.pdf ]</footer>
+</div>
+<script src="/demos/switcher.js"></script>
+</body>
+</html>

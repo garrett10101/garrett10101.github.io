@@ -5,33 +5,34 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div style="background-color: black" id="background-container">
-</div>
-
     <header>
         <nav>
             <ul>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#github-projects">GitHub</a></li>
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#contact">Contact Me</a></li>
             </ul>
         </nav>
     </header>
-    <section style="color: white;" id="introduction">
+    <section id="introduction">
         <h2>Welcome to My Portfolio</h2>
         <p>Driven and detail-oriented, I am a computer science graduate with a focus on engineering and problem-solving. Specializing in machine learning, programming, and performance optimization through parallelism, I bring a wealth of experience in configuring complex systems. As a National Eagle Scout recipient, I demonstrate exceptional leadership and a commitment to excellence. Passionate about pushing the boundaries of technology, I am eager to engage in challenging engineering opportunities, contributing to innovative projects and making a lasting impact.</p>
+        <div class="hero-actions">
+            <a href="Garrett_DiPalma_Resume.pdf" download="Garrett_DiPalma_Resume.pdf" class="btn btn-primary">Download Resume</a>
+            <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+        </div>
     </section>
-    
 
     <!-- Projects Section -->
     <section id="projects">
-        <h2 style="color: white;">My Projects</h2>
+        <h2>My Projects</h2>
         <div class="slideshow-container">
 
             <!-- Slide 1 -->
             <div class="mySlides fade">
                 <div class="numbertext">1 / [total number of slides]</div>
-                <img src="img/CPU vs CUDA.png" style="width:100%">
+                <img src="img/CPU vs CUDA.png">
                 <div class="text-box">
                     <p class="slide-text">CPU vs CUDA - Computer Architecture project that used OpenMP and CUDA to compare performance between CPU and GPU</p>
                     <a href="https://github.com/jtj60/Computer-Architecture-Project" class="project-button">View Project</a>
@@ -42,7 +43,7 @@
             <!-- Add more slides here -->
             <div class="mySlides fade">
                 <div class="numbertext">2 / [total number of slides]</div>
-                <img src="img/BobcatClaws.png" style="width:100%">
+                <img src="img/BobcatClaws.png">
                 <div class="text-box">
                     <p class="slide-text">BobcatCLAWS - Senior Software Project. Deployed via NodeJS on-campus server, used SSL, reverse proxy, and AngularUI. Used MySQL database and created scripts for data collection and reactive webpage.</p>
                     <a href="https://github.com/garrett10101/BobcatClaws" class="project-button">View Project</a>
@@ -62,7 +63,7 @@
             </div>
             <div class="mySlides fade">
                 <div class="numbertext">1 / [total number of slides]</div>
-                <img src="img/Predictions Graph_GB_GridSearch.png" style="width:100%">
+                <img src="img/Predictions Graph_GB_GridSearch.png">
                 <div class="text-box">
                     <p class="slide-text"><strong>Machine Learning Course Project</strong> - Forecasting Total Dissolved Solids (TDS) and water temperature using advanced machine learning techniques.</p>
                     <a href="https://github.com/garrett10101/Machine-Learning-Project" class="project-button">View Project</a>
@@ -80,9 +81,14 @@
         <div id="dots-container" style="text-align:center"></div>
         </section>
 
-    
+    <!-- GitHub Projects Section: auto-populated live from the GitHub API, see js/githubProjects.js -->
+    <section id="github-projects">
+        <h2>Latest from GitHub</h2>
+        <p>Pulled live from <a href="https://github.com/garrett10101" target="_blank">github.com/garrett10101</a> &mdash; updates automatically as new repos are pushed, no redeploy needed.</p>
+        <div id="github-repo-list" class="repo-grid"></div>
+    </section>
 
-    <section style="color: white;" id="about">
+    <section id="about">
         <h2>About Me</h2>
         <h3>Education</h3>
         <p><strong>Bachelor of Science in Computer Science</strong> <br>
@@ -91,48 +97,14 @@
         Relevant Coursework: Machine Learning, Computer Systems Fundamentals, Data Mining, Database Systems, Data Structures & Algorithms, Object-Oriented Programming, Software Engineering.</p>
         
         <h3>Relevant Experience/Projects</h3>
-        <ul>
-            <li><strong>IT Assistant - Meadows Center, Texas State University</strong> (<i>02/2023 - Present</i>) - Installed, set up, and configured WeeWX on an Intel NUC and a Davis Vantage Pro 2 station. Managed Apache and FTP for device backup, improved data accuracy and reporting efficiency.</li>
-            <li><strong>IT Technician - QASystems, AISD Contractor</strong> (<i>03/2024 - 01/2025</i>) - As an IT Technician, I provide Tier 1 hardware support with a primary focus on repairing Chromebooks. My role involves diagnosing and resolving hardware issues efficiently, performing quality control (QC) checks, sorting inventory, and managing various other projects as assigned. Additionally, I maintain accurate records using advanced inventory management software to ensure seamless operations.</li>
-            <li><strong>Computer Technician - GTS Technologies</strong> (<i>06/2023 - 09/2023</i>) - Conducted Quality Assurance on Chromebooks, iPads, and other devices. Led the update of Inventory Management Software and Database Management System, ensuring smooth network operations.</li>
-        </ul>
+        <!-- Rendered live from js/experienceData.js by js/experience.js. Update that data file whenever your LinkedIn experience changes. -->
+        <ul id="experience-list" class="experience-list"></ul>
         <section id="skills">
             <h2>Technical Skills</h2>
-            <div class="skills-container">
-                <!-- Languages Icons -->
-                <div class="icon-background" data-tooltip="C"><img src="img/icons/c.webp" alt="C"></div>
-                <div class="icon-background" data-tooltip="C++"><img src="img/icons/cpp.webp" alt="C++"></div>
-                <div class="icon-background" data-tooltip="C#"><img src="img/icons/c-sharp.png" alt="C#"></div>
-                <div class="icon-background" data-tooltip="Python"><img src="img/icons/python.png" alt="Python"></div>
-                <div class="icon-background" data-tooltip="Java"><img src="img/icons/java.png" alt="Java"></div>
-                <div class="icon-background" data-tooltip="JavaScript"><img src="img/icons/javascript.png" alt="JavaScript"></div>
-                <div class="icon-background" data-tooltip="PHP"><img src="img/icons/php.png" alt="PHP"></div>
-                <div class="icon-background" data-tooltip="HTML"><img src="img/icons/html.png" alt="HTML"></div>
-                <div class="icon-background" data-tooltip="BASH"><img src="img/icons/bash.png" alt="BASH"></div>
-                <div class="icon-background" data-tooltip="CSS"><img src="img/icons/css.png" alt="CSS"></div>
-                <div class="icon-background" data-tooltip="SQL"><img src="img/icons/sql.jpg" alt="SQL"></div>
-                <div class="icon-background" data-tooltip="PowerShell"><img src="img/icons/powershell.png" alt="PowerShell"></div>
-                <!-- Technologies Icons -->
-                <div class="icon-background" data-tooltip="Oracle"><img src="img/icons/oracle.png" alt="Oracle"></div>
-                <div class="icon-background" data-tooltip="MySQL"><img src="img/icons/mysql.png" alt="MySQL"></div>
-                <div class="icon-background" data-tooltip="Flask"><img src="img/icons/flask.png" alt="Flask"></div>
-                <div class="icon-background" data-tooltip="Jira"><img src="img/icons/jira.png" alt="Jira"></div>
-                <div class="icon-background" data-tooltip="BitBucket"><img src="img/icons/bitbucket.png" alt="BitBucket"></div>
-                <div class="icon-background" data-tooltip="Git/GitHub"><img src="img/icons/git.png" alt="Git/GitHub"></div>
-                <div class="icon-background" data-tooltip="Linux"><img src="img/icons/linux.png" alt="Linux"></div>
-                <div class="icon-background" data-tooltip="Unix"><img src="img/icons/unix.png" alt="Unix"></div>
-                <div class="icon-background" data-tooltip="Windows"><img src="img/icons/windows.png" alt="Windows"></div>
-                <div class="icon-background" data-tooltip="Visual Studio"><img src="img/icons/visual studio.png" alt="Visual Studio"></div>
-                <div class="icon-background" data-tooltip="Geany"><img src="img/icons/geany.png" alt="Geany"></div>
-                <div class="icon-background" data-tooltip="MySQL Workbench"><img src="img/icons/mysql-workbench.png" alt="MySQL Workbench"></div>
-                <div class="icon-background" data-tooltip="Pandas"><img src="img/icons/pandas.png" alt="Pandas"></div>
-                <div class="icon-background" data-tooltip="Numpy"><img src="img/icons/numpy.png" alt="Numpy"></div>
-                <div class="icon-background" data-tooltip="Matplotlib"><img src="img/icons/matplotlib.png" alt="Matplotlib"></div>
-                <div class="icon-background" data-tooltip="Windows Server"><img src="img/icons/windows server.png" alt="Windows Server"></div>
-                <div class="icon-background" data-tooltip="VMWare"><img src="img/icons/vmware.png" alt="VMWare"></div>
-                <div class="icon-background" data-tooltip="Active Directory"><img src="img/icons/active directory.jpg" alt="Active Directory"></div>
-                <div class="icon-background" data-tooltip="API Integration"><img src="img/icons/rest-api.png" alt="API Integration"></div>
-            </div>
+            <!-- Rendered live from js/skillsData.js by js/skills.js. Regenerate via
+                 `npm run import:linkedin -- <export-dir>`, or hand-edit scripts/skillsCategoryMap.js
+                 for a one-off addition. -->
+            <div id="skills-categories" class="skills-categories"></div>
         </section>
         
               
@@ -147,36 +119,46 @@
     </section> -->
     
 
-    <section style="color: white;" id="contact">
+    <section id="contact">
         <h2>Get in Touch</h2>
         <p>I'm always interested in new opportunities and collaborations. Feel free to reach out to me!</p>
-        
+
         <form id="contactForm">
-            <label for="email">Your Email:</label><br>
-            <input type="email" id="email" name="email" required><br>
-    
-            <label for="subject">Subject:</label><br>
-            <input type="text" id="subject" name="subject" required><br>
-    
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" required></textarea><br>
-    
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
             <button type="submit">Send</button>
+            <div id="formStatus" role="status" aria-live="polite"></div>
         </form>
     </section>
     <footer>
-        <p style="color: white;">&copy; 2024 Garrett DiPalma</p>
+        <p>&copy; 2024 Garrett DiPalma</p>
          <!-- Social Media Links -->
          <div class="social-media">
             <a href="https://www.linkedin.com/in/garrett-dipalma/" class="social-link" target="_blank"><img src="img/linkedin-icon.png" alt="LinkedIn"></a>
             <a href="https://github.com/garrett10101" class="social-link" target="_blank"><img src="img/github-icon.png" alt="GitHub"></a>
-            <a href="Garrett_Resume - Edited Resume.pdf" download="Garrett_DiPalma_Resume.pdf" class="resume-download">
+            <a href="Garrett_DiPalma_Resume.pdf" download="Garrett_DiPalma_Resume.pdf" class="resume-download">
                 <img src="img/download-icon.png" alt="Download Resume">
             </a>
         </div>
     </footer>
-    <script src="js/navbar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="js/emailjsConfig.js"></script>
     <script src="js/emailMe.js"></script>
+    <script src="js/experienceData.js"></script>
+    <script src="js/experience.js"></script>
+    <script src="js/skillsData.js"></script>
+    <script src="js/skills.js"></script>
+    <script src="js/githubProjects.js"></script>
+    <script src="js/navbar.js"></script>
     <script src="js/slideshow.js"></script>
+    <!-- Temporary design-review aid — remove once a redesign direction is chosen -->
+    <script src="demos/switcher.js"></script>
 </body>
 </html>
