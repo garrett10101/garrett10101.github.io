@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "import:linkedin": "node scripts/import-linkedin-export.js",
-    "demos:screenshot": "node scripts/screenshot-demos.js",
-    "demos:gallery": "node scripts/build-demo-gallery.js"
+    "import:linkedin": "node scripts/import-linkedin-export.js"
   },
   "keywords": [],
   "author": "",
