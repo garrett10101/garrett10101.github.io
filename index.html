@@ -84,8 +84,22 @@
     <!-- GitHub Projects Section: auto-populated live from the GitHub API, see js/githubProjects.js -->
     <section id="github-projects">
         <h2>Latest from GitHub</h2>
-        <p>Pulled live from <a href="https://github.com/garrett10101" target="_blank">github.com/garrett10101</a> &mdash; updates automatically as new repos are pushed, no redeploy needed.</p>
+        <p>Pulled live from <a href="https://github.com/garrett10101" target="_blank">github.com/garrett10101</a> &mdash; showing the repositories with the most recent activity, updated automatically as new repos are pushed, no redeploy needed.</p>
         <div id="github-repo-list" class="repo-grid"></div>
+
+        <h3>Contribution Activity</h3>
+        <div class="github-activity">
+            <a href="https://github.com/garrett10101" target="_blank" rel="noopener">
+                <img src="https://ghchart.rshah.org/2dd4bf/garrett10101" alt="Garrett's GitHub contribution activity over the past year" loading="lazy">
+            </a>
+        </div>
+
+        <!-- Static note: private-repo work isn't visible to the unauthenticated GitHub API.
+             Edit this blurb to reflect current private engagements. -->
+        <div class="private-activity-note">
+            <span class="private-badge">Private</span>
+            <p>A large share of my recent work lives in <strong>private repositories</strong> that don't appear in the live list above. This includes my Q2 software-engineering role &mdash; building and integrating services with <strong>T-SQL &amp; Microsoft SQL Server</strong> and <strong>SOAP / WSDL / XML</strong> web services under standard <strong>SDLC</strong> practices. The contribution graph above still reflects that activity (as anonymized counts) when private contributions are enabled.</p>
+        </div>
     </section>
 
     <section id="about">
