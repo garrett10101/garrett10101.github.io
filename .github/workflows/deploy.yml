@@ -1,35 +1,63 @@
-name: Deploy React App to GitHub Pages
+name: Deploy portfolio to GitHub Pages
 
 on:
   push:
-    branches:
-      - react-branch  # Replace with your branch name
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
-  build-and-deploy:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-        with:
-          ref: react-conversion  # Checkout the specific branch
+      - name: Checkout
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: '18'  # Specify the Node.js version
+          node-version: "20"
 
       - name: Install dependencies
-        run: npm install
-        working-directory: .  # Use the root directory
+        run: npm ci
 
-      - name: Build the project
-        run: npm run build
-        working-directory: .  # Use the root directory
+      - name: Run tests
+        run: npm test
+
+      # Overwrites js/emailjsConfig.js in this runner's working directory only —
+      # never committed back to git. The checked-in file keeps safe REPLACE_ME
+      # placeholders; see README.md "Contact form (EmailJS) setup".
+      - name: Inject EmailJS config from repository secrets
+        env:
+          EMAILJS_PUBLIC_KEY: ${{ secrets.EMAILJS_PUBLIC_KEY }}
+          EMAILJS_SERVICE_ID: ${{ secrets.EMAILJS_SERVICE_ID }}
+          EMAILJS_TEMPLATE_ID: ${{ secrets.EMAILJS_TEMPLATE_ID }}
+        run: node scripts/generate-emailjs-config.js
+
+      # node_modules is only needed for the `npm test` step above — it must
+      # never be part of the published site (hundreds of unnecessary files).
+      - name: Remove dev dependencies before publishing
+        run: rm -rf node_modules
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+        id: deployment
+        uses: actions/deploy-pages@v4

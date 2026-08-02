@@ -4,13 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "import:linkedin": "node scripts/import-linkedin-export.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
+    "csv-parse": "^7.0.1",
     "jest": "^29.7.0"
   }
 }
