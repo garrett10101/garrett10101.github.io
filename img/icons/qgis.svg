@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="QGIS">
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="#589632"/>
+  <g fill="none" stroke="#ffffff" stroke-width="2.2">
+    <circle cx="32" cy="22" r="9.5"/>
+    <ellipse cx="32" cy="22" rx="3.8" ry="9.5"/>
+    <path d="M22.5 22 h19"/>
+  </g>
+  <text x="32" y="50" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">QGIS</text>
+</svg>
