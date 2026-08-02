@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Microsoft SQL Server">
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="#A4171C"/>
+  <g fill="#ffffff">
+    <ellipse cx="32" cy="19" rx="16" ry="6"/>
+    <path d="M16 19 V45 c0 3.3 7.2 6 16 6 s16 -2.7 16 -6 V19 c0 3.3 -7.2 6 -16 6 S16 22.3 16 19 Z"/>
+  </g>
+  <g fill="none" stroke="#A4171C" stroke-width="2.2">
+    <path d="M16 28 c0 3.3 7.2 6 16 6 s16 -2.7 16 -6"/>
+    <path d="M16 37 c0 3.3 7.2 6 16 6 s16 -2.7 16 -6"/>
+  </g>
+</svg>

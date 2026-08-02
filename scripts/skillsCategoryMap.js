@@ -30,7 +30,7 @@ var SKILL_CATEGORIES = {
     'css': { name: 'CSS', category: 'Languages', icon: 'img/icons/css.png' },
     'bash': { name: 'BASH', category: 'Languages', icon: 'img/icons/bash.png' },
     'sql': { name: 'SQL', category: 'Languages', icon: 'img/icons/sql.jpg' },
-    't-sql': { name: 'T-SQL', category: 'Languages' },
+    't-sql': { name: 'T-SQL', category: 'Languages', icon: 'img/icons/t-sql.svg' },
     'powershell': { name: 'PowerShell', category: 'Languages', icon: 'img/icons/powershell.png' },
 
     'flask': { name: 'Flask', category: 'Frameworks & Libraries', icon: 'img/icons/flask.png' },
@@ -39,7 +39,7 @@ var SKILL_CATEGORIES = {
     'matplotlib': { name: 'Matplotlib', category: 'Frameworks & Libraries', icon: 'img/icons/matplotlib.png' },
 
     'oracle': { name: 'Oracle', category: 'Databases & Data Tools', icon: 'img/icons/oracle.png' },
-    'microsoft sql server': { name: 'Microsoft SQL Server', category: 'Databases & Data Tools' },
+    'microsoft sql server': { name: 'Microsoft SQL Server', category: 'Databases & Data Tools', icon: 'img/icons/sql-server.svg' },
     'mysql': { name: 'MySQL', category: 'Databases & Data Tools', icon: 'img/icons/mysql.png' },
     'mysql workbench': { name: 'MySQL Workbench', category: 'Databases & Data Tools', icon: 'img/icons/mysql-workbench.png' },
 
@@ -57,11 +57,11 @@ var SKILL_CATEGORIES = {
     'visual studio': { name: 'Visual Studio', category: 'Dev & Project Tools', icon: 'img/icons/visual studio.png' },
     'geany': { name: 'Geany', category: 'Dev & Project Tools', icon: 'img/icons/geany.png' },
 
-    'wsdl': { name: 'WSDL', category: 'Web Services & Integration' },
-    'xml': { name: 'XML', category: 'Web Services & Integration' },
-    'soap': { name: 'SOAP', category: 'Web Services & Integration' },
+    'wsdl': { name: 'WSDL', category: 'Web Services & Integration', icon: 'img/icons/wsdl.svg' },
+    'xml': { name: 'XML', category: 'Web Services & Integration', icon: 'img/icons/xml.svg' },
+    'soap': { name: 'SOAP', category: 'Web Services & Integration', icon: 'img/icons/soap.svg' },
 
-    'sdlc': { name: 'SDLC', category: 'Methodologies & Concepts' }
+    'sdlc': { name: 'SDLC', category: 'Methodologies & Concepts', icon: 'img/icons/sdlc.svg' }
 };
 
 // LinkedIn skill label variants -> canonical key in SKILL_CATEGORIES above.

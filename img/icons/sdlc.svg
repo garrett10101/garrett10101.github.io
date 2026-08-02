@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="SDLC">
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="#2E8B57"/>
+  <g transform="translate(20,11)" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="23 4 23 10 17 10"/>
+    <path d="M20.49 15a9 9 0 1 1 -2.12 -9.36 L23 10"/>
+  </g>
+  <text x="32" y="52" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">SDLC</text>
+</svg>
